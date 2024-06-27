@@ -1,4 +1,11 @@
+import Navbar from "./Navbar";
+
 const Projects = () => {
-  return <div>Projects</div>;
+  return (
+    <>
+      <Navbar></Navbar>
+      Projects
+    </>
+  );
 };
 export default Projects;

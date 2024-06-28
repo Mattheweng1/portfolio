@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="mb-6 flex items-center justify-between p-6">
+    <nav className="m-8 flex items-center justify-between p-6">
       <NavLink
         to={"/"}
         className="flex flex-shrink-0 items-end font-bold select-none z-10"
@@ -21,7 +21,7 @@ const Navbar = () => {
         <span className="text-red-500 text-3xl leading-[0.74]">ME</span>
         <span className="leading-[0.74]">dev</span>
       </NavLink>
-      <div className="m-8 items-center justify-center gap-4 text-xl hidden md:flex">
+      <div className="items-center justify-center gap-4 text-xl hidden md:flex">
         <NavLink to="/about">About</NavLink>
         <NavLink to="/projects">Projects</NavLink>
         <NavLink to="/contact">Contact</NavLink>

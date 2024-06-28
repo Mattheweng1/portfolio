@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="mb-20 flex items-center justify-between p-6">
+    <nav className="mb-6 flex items-center justify-between p-6">
       <NavLink
         to={"/"}
         className="flex flex-shrink-0 items-end font-bold select-none z-10"
@@ -34,7 +34,7 @@ const Navbar = () => {
         </button>
       </div>
       {isOpen && (
-        <div className="fixed top-0 left-0 z-1 h-full w-full flex items-center flex-col justify-evenly text-5xl">
+        <div className="md:hidden fixed top-0 left-0 z-1 h-full w-full flex items-center flex-col justify-evenly text-5xl">
           <NavLink to="/about" onClick={toggleNavbar}>
             About
           </NavLink>

@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="m-8 flex items-center justify-between p-6">
+    <nav className="mt-8 mb-16 flex items-center justify-between">
       <NavLink
         to={"/"}
         className="flex flex-shrink-0 items-end font-bold select-none z-10"

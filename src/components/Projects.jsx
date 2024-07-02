@@ -1,13 +1,32 @@
+import { PROJECTS } from "../constants/constants";
+import FlexWrapper from "./FlexWrapper";
+import FlexWrapperItem from "./FlexWrapperItem";
 import Navbar from "./Navbar";
+import PageContainer from "./PageContainer";
+import PageTitle from "./PageTitle";
+import ProjectDetails from "./ProjectDetails";
 
 const Projects = () => {
   return (
     <>
       <Navbar></Navbar>
-      <div className="my-6 mx-[10%]">
-        <h1 className="mx-6 my-3 text-7xl">Projects</h1>
-        <div className="h-3 bg-red-900"></div>
-      </div>
+      <PageContainer>
+        <PageTitle title="Projects" />
+        {PROJECTS.map((item, i) => (
+          <FlexWrapper key={i}>
+            <FlexWrapperItem className="p-8">
+              <img
+                className="rounded-2xl"
+                src="src/assets/about.jpg"
+                alt="Portrait Photo of Matthew"
+              />
+            </FlexWrapperItem>
+            <FlexWrapperItem className="lg:items-start">
+              <ProjectDetails project={item} />
+            </FlexWrapperItem>
+          </FlexWrapper>
+        ))}
+      </PageContainer>
     </>
   );
 };

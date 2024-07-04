@@ -4,14 +4,14 @@ import FlexWrapper from "./FlexWrapper";
 import FlexWrapperItem from "./FlexWrapperItem";
 import Navbar from "./Navbar";
 import PageContainer from "./PageContainer";
-import PageTitle from "./PageTitle";
+import SectionTitle from "./SectionTitle";
 
 const About = () => {
   return (
     <>
       <Navbar></Navbar>
       <PageContainer>
-        <PageTitle title="About"></PageTitle>
+        <SectionTitle title="About My"></SectionTitle>
         <FlexWrapper>
           <FlexWrapperItem className="p-8">
             <img

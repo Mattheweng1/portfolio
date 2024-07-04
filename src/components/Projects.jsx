@@ -3,7 +3,7 @@ import FlexWrapper from "./FlexWrapper";
 import FlexWrapperItem from "./FlexWrapperItem";
 import Navbar from "./Navbar";
 import PageContainer from "./PageContainer";
-import PageTitle from "./PageTitle";
+import SectionTitle from "./SectionTitle";
 import ProjectDetails from "./ProjectDetails";
 
 const Projects = () => {
@@ -11,7 +11,7 @@ const Projects = () => {
     <>
       <Navbar></Navbar>
       <PageContainer>
-        <PageTitle title="Projects" />
+        <SectionTitle title="Projects" />
         {PROJECTS.map((item, i) => (
           <FlexWrapper key={i}>
             <FlexWrapperItem className="p-8">

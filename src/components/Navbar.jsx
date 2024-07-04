@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaBarsStaggered } from "react-icons/fa6";
@@ -8,12 +8,22 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNavbar = () => {
+  const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const stopBodyScroll = () => {
+    if (isOpen && typeof window != "undefined" && window.document) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  };
+
+  useEffect(stopBodyScroll, [isOpen]);
+
   return (
-    <nav className="mt-8 mb-16 flex items-center justify-between">
+    <nav className="flex items-center justify-between fixed top-0 left-0 w-screen px-10 py-8">
       <NavLink
         to={"/"}
         className="flex flex-shrink-0 items-end font-bold select-none z-10"
@@ -29,19 +39,19 @@ const Navbar = () => {
         <FaGithub />
       </div>
       <div className="md:hidden z-10">
-        <button onClick={toggleNavbar}>
+        <button onClick={toggleMenu}>
           {isOpen ? <FaX /> : <FaBarsStaggered />}
         </button>
       </div>
       {isOpen && (
-        <div className="md:hidden fixed top-0 left-0 z-1 h-full w-full flex items-center flex-col justify-evenly text-5xl">
-          <NavLink to="/about" onClick={toggleNavbar}>
+        <div className="md:hidden fixed top-0 left-0 z-1 h-full w-full flex items-center flex-col justify-evenly text-5xl bg-black">
+          <NavLink to="/about" onClick={toggleMenu}>
             About
           </NavLink>
-          <NavLink to="/projects" onClick={toggleNavbar}>
+          <NavLink to="/projects" onClick={toggleMenu}>
             Projects
           </NavLink>
-          <NavLink to="/contact" onClick={toggleNavbar}>
+          <NavLink to="/contact" onClick={toggleMenu}>
             Contact
           </NavLink>
           <FaLinkedin />

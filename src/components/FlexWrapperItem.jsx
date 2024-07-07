@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const FlexWrapperItem = ({ className, children }) => {
   const classNameString =
-    "w-full lg:w-1/2 flex flex-col self-center items-center justify-center py-8 " +
+    "w-full lg:w-1/2 flex flex-col self-center items-center justify-center " +
     className;
 
   return <div className={classNameString}>{children}</div>;

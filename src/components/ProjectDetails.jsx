@@ -15,7 +15,7 @@ const ProjectDetails = ({ project }) => {
           </React.Fragment>
         ))}
       </ul>
-      <div className="flex gap-8">
+      <div className="flex gap-8 mt-8">
         <Button isExternal route={project.link.live} text="Website" />
         <Button isExternal route={project.link.code} text="Code" />
       </div>

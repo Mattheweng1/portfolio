@@ -16,8 +16,8 @@ const ProjectDetails = ({ project }) => {
         ))}
       </ul>
       <div className="flex gap-8">
-        <Button text="Website" />
-        <Button text="Code" />
+        <Button isExternal route={project.link.live} text="Website" />
+        <Button isExternal route={project.link.code} text="Code" />
       </div>
     </>
   );

@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { FaX } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
+import { LINKS } from "../constants/constants";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,8 +36,12 @@ const Navbar = () => {
         <NavLink to="/about">About</NavLink>
         <NavLink to="/projects">Projects</NavLink>
         <NavLink to="/contact">Contact</NavLink>
-        <FaLinkedin />
-        <FaGithub />
+        <a href={LINKS.linkedIn} target="_blank" rel="noopener noreferrer">
+          <FaLinkedin />
+        </a>
+        <a href={LINKS.gitHub} target="_blank" rel="noopener noreferrer">
+          <FaGithub />
+        </a>
       </div>
       <div className="md:hidden z-10">
         <button onClick={toggleMenu}>
@@ -54,8 +59,12 @@ const Navbar = () => {
           <NavLink to="/contact" onClick={toggleMenu}>
             Contact
           </NavLink>
-          <FaLinkedin />
-          <FaGithub />
+          <a href={LINKS.linkedIn} target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
+          <a href={LINKS.gitHub} target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+          </a>
         </div>
       )}
     </nav>

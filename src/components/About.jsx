@@ -6,6 +6,7 @@ import { FaReact, FaHtml5, FaCss3, FaJs, FaGitAlt } from "react-icons/fa6";
 import SkillLabel from "./SkillLabel";
 import TitledCard from "./TitledCard";
 import SkillIconBox from "./SkillIconBox";
+import { LINKS } from "../constants/constants";
 
 const About = () => {
   return (
@@ -18,7 +19,7 @@ const About = () => {
             I learned most of my front-end development skills through hands-on,
             project-based learning with{" "}
             <a
-              href="http://theodinproject.com/about"
+              href={LINKS.theOdinProject}
               target="_blank"
               rel="noopener noreferrer"
               className="text-red-500"

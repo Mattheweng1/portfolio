@@ -16,9 +16,9 @@ const Projects = () => {
           <FlexWrapper key={i}>
             <FlexWrapperItem className="p-8">
               <img
-                className="rounded-2xl"
-                src="src/assets/about.jpg"
-                alt="Portrait Photo of Matthew"
+                className="rounded-2xl border-2 border-red-500"
+                src={item.image.src}
+                alt={item.image.alt}
               />
             </FlexWrapperItem>
             <FlexWrapperItem className="lg:items-start">

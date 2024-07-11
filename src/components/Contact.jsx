@@ -35,13 +35,10 @@ const Contact = () => {
             hear about it. Let&apos;s build something together!
           </TitledCard>
         </FlexWrapper>
-        <FlexWrapper className="flex-col gap-5">
-          <FlexWrapper className="items-center !justify-center gap-5 !m-0">
-            <div className="text-2xl font-light">Visit my</div>
-            <Button isExternal route={LINKS.linkedIn} text="LinkedIn" />
-          </FlexWrapper>
-          <div className="text-center text-2xl font-light">or</div>
-          <div className="text-center text-2xl font-light">fill out this</div>
+        <FlexWrapper className="items-center !justify-center gap-5">
+          <div className="text-2xl font-light">Visit my</div>
+          <Button isExternal route={LINKS.linkedIn} text="LinkedIn" />
+          <div className="text-2xl font-light">or fill out this</div>
           <ContactForm />
         </FlexWrapper>
       </PageContainer>

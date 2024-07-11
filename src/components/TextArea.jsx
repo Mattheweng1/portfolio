@@ -2,7 +2,15 @@ import { useRef, useState } from "react";
 import { useAutosizeTextArea } from "../hooks/useAutosizeTextArea";
 import PropTypes from "prop-types";
 
-const TextArea = ({ onChange, id, name, placeholder, className, rows }) => {
+const TextArea = ({
+  onChange,
+  id,
+  name,
+  placeholder,
+  className,
+  rows,
+  required,
+}) => {
   const [value, setValue] = useState("");
 
   const onChangeHandler = (e) => {
@@ -19,7 +27,7 @@ const TextArea = ({ onChange, id, name, placeholder, className, rows }) => {
     <textarea
       ref={textAreaRef}
       onChange={onChangeHandler}
-      {...{ id, name, placeholder, className, rows }}
+      {...{ id, name, placeholder, className, rows, required }}
     />
   );
 };
@@ -31,6 +39,7 @@ TextArea.propTypes = {
   placeholder: PropTypes.string,
   className: PropTypes.string,
   rows: PropTypes.number,
+  required: PropTypes.bool,
 };
 
 export default TextArea;

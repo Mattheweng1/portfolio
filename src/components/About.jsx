@@ -1,5 +1,4 @@
 import FlexWrapper from "./FlexWrapper";
-import Navbar from "./Navbar";
 import PageContainer from "./PageContainer";
 import SectionTitle from "./SectionTitle";
 import { FaReact, FaHtml5, FaCss3, FaJs, FaGitAlt } from "react-icons/fa6";
@@ -11,7 +10,6 @@ import { LINKS } from "../constants/constants";
 const About = () => {
   return (
     <>
-      <Navbar />
       <PageContainer>
         <SectionTitle title="About My" />
         <FlexWrapper className="gap-12">

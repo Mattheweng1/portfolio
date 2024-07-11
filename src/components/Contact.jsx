@@ -2,7 +2,6 @@ import { LINKS } from "../constants/constants";
 import Button from "./Button";
 import ContactForm from "./ContactForm";
 import FlexWrapper from "./FlexWrapper";
-import Navbar from "./Navbar";
 import PageContainer from "./PageContainer";
 import SectionTitle from "./SectionTitle";
 import TitledCard from "./TitledCard";
@@ -10,7 +9,6 @@ import TitledCard from "./TitledCard";
 const Contact = () => {
   return (
     <>
-      <Navbar />
       <PageContainer>
         <SectionTitle title="Looking To" />
         <FlexWrapper className="gap-12">

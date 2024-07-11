@@ -1,7 +1,6 @@
 import { LINKS, PROJECTS } from "../constants/constants";
 import FlexWrapper from "./FlexWrapper";
 import FlexWrapperItem from "./FlexWrapperItem";
-import Navbar from "./Navbar";
 import PageContainer from "./PageContainer";
 import SectionTitle from "./SectionTitle";
 import ProjectDetails from "./ProjectDetails";
@@ -10,7 +9,6 @@ import Button from "./Button";
 const Projects = () => {
   return (
     <>
-      <Navbar></Navbar>
       <PageContainer>
         <SectionTitle title="Projects" />
         {PROJECTS.map((item, i) => (

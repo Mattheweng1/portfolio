@@ -1,7 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { PiCaretDoubleDownThin } from "react-icons/pi";
-import { LINKS } from "../constants/constants";
 
 const Home = () => {
   return (
@@ -37,15 +35,6 @@ const Home = () => {
       </div>
       <div className="flex justify-center">
         <PiCaretDoubleDownThin className="text-5xl my-5 text-red-500" />
-      </div>
-      <div className="flex flex-col fixed bottom-0 left-3 text-3xl gap-10 items-center">
-        <a href={LINKS.gitHub} target="_blank" rel="noopener noreferrer">
-          <FaGithub />
-        </a>
-        <a href={LINKS.linkedIn} target="_blank" rel="noopener noreferrer">
-          <FaLinkedin />
-        </a>
-        <div className="w-1 h-20 bg-neutral-300 rounded-t-sm"></div>
       </div>
     </div>
   );

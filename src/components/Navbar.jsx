@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaBarsStaggered } from "react-icons/fa6";
-import { FaX } from "react-icons/fa6";
+import { FaBarsStaggered, FaGithub, FaLinkedin, FaX } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import { LINKS } from "../constants/constants";
 

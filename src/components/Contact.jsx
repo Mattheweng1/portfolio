@@ -38,7 +38,7 @@ const Contact = () => {
         <FlexWrapper className="flex-col gap-5">
           <FlexWrapper className="items-center !justify-center gap-5 !m-0">
             <div className="text-2xl font-light">Visit my</div>
-            <Button route={LINKS.linkedIn} text="LinkedIn" />
+            <Button isExternal route={LINKS.linkedIn} text="LinkedIn" />
           </FlexWrapper>
           <div className="text-center text-2xl font-light">or</div>
           <div className="text-center text-2xl font-light">fill out this</div>

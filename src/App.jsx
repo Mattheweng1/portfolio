@@ -7,11 +7,32 @@ import Contact from "./components/Contact";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { PiCaretDoubleUpThin } from "react-icons/pi";
 import { LINKS } from "./constants/constants";
+import { useEffect, useState } from "react";
 
 const App = () => {
+  const [isVisibleNavbar, setIsVisibleNavbar] = useState(false);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY; // Get current scroll position
+    const elementPosition = document.getElementById("about").offsetTop; // Get element's position from top
+
+    if (scrollPosition >= elementPosition) {
+      setIsVisibleNavbar(true);
+    } else {
+      setIsVisibleNavbar(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup on unmount
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      <Navbar />
+      {isVisibleNavbar && <Navbar />}
       <PageContainer>
         <Home />
         <About />

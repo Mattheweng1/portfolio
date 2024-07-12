@@ -46,7 +46,7 @@ const Navbar = () => {
         </button>
       </div>
       {isOpen && (
-        <div className="md:hidden fixed top-0 left-0 z-1 h-full w-full p-10 flex text-center flex-col justify-evenly text-5xl bg-black">
+        <div className="md:hidden fixed top-0 left-0 z-1 h-full w-full p-10 flex text-center flex-col justify-evenly text-5xl font-light bg-black">
           <a href="#about" onClick={toggleMenu}>
             About
           </a>

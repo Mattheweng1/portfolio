@@ -2,15 +2,13 @@ import { LINKS } from "../constants/constants";
 import Button from "./Button";
 import ContactForm from "./ContactForm";
 import FlexWrapper from "./FlexWrapper";
-import PageContainer from "./PageContainer";
-import SectionTitle from "./SectionTitle";
+import TitledSection from "./TitledSection";
 import TitledCard from "./TitledCard";
 
 const Contact = () => {
   return (
     <>
-      <PageContainer>
-        <SectionTitle title="Looking To" />
+      <TitledSection title="Looking To" id="contact">
         <FlexWrapper className="gap-12">
           <TitledCard title="Offer Me a Job?">
             Web development is more than just a passion but what I see in my
@@ -35,11 +33,13 @@ const Contact = () => {
         </FlexWrapper>
         <FlexWrapper className="items-center !justify-center gap-5">
           <div className="text-2xl font-light">Visit my</div>
-          <Button isExternal route={LINKS.linkedIn} text="LinkedIn" />
+          <Button isLink href={LINKS.linkedIn}>
+            LinkedIn
+          </Button>
           <div className="text-2xl font-light">or fill out this</div>
           <ContactForm />
         </FlexWrapper>
-      </PageContainer>
+      </TitledSection>
     </>
   );
 };

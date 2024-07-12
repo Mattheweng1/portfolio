@@ -1,16 +1,14 @@
 import { LINKS, PROJECTS } from "../constants/constants";
 import FlexWrapper from "./FlexWrapper";
 import FlexWrapperItem from "./FlexWrapperItem";
-import PageContainer from "./PageContainer";
-import SectionTitle from "./SectionTitle";
+import TitledSection from "./TitledSection";
 import ProjectDetails from "./ProjectDetails";
 import Button from "./Button";
 
 const Projects = () => {
   return (
     <>
-      <PageContainer>
-        <SectionTitle title="Projects" />
+      <TitledSection title="Projects" id="projects">
         {PROJECTS.map((item, i) => (
           <FlexWrapper key={i}>
             <FlexWrapperItem className="p-8">
@@ -27,10 +25,12 @@ const Projects = () => {
         ))}
         <FlexWrapper className="items-center !justify-center gap-5">
           <div className="text-2xl font-light">Visit my</div>
-          <Button isExternal route={LINKS.gitHub} text="GitHub" />
+          <Button isLink href={LINKS.gitHub}>
+            GitHub
+          </Button>
           <div className="text-2xl font-light">to see more</div>
         </FlexWrapper>
-      </PageContainer>
+      </TitledSection>
     </>
   );
 };

@@ -1,9 +1,8 @@
-import { NavLink } from "react-router-dom";
 import { PiCaretDoubleDownThin } from "react-icons/pi";
 
 const Home = () => {
   return (
-    <div className="flex flex-col h-screen w-full">
+    <div id="home" className="flex flex-col h-screen w-full">
       <div className="flex flex-auto flex-col lg:flex-row gap-x-24 [text-shadow:_1px_2px_3px_var(--tw-shadow-color)] shadow-black">
         <div className="flex-auto m-6 flex items-end lg:self-center lg:relative">
           <h1 className="text-4xl sm:text-5xl leading-normal">
@@ -28,13 +27,15 @@ const Home = () => {
           />
         </div>
         <div className="flex-auto m-6 flex flex-col justify-around gap-10 lg:justify-center lg:gap-20 items-center text-5xl font-light">
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/projects">Projects</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
       <div className="flex justify-center">
-        <PiCaretDoubleDownThin className="text-5xl my-5 text-red-500" />
+        <a href="#about">
+          <PiCaretDoubleDownThin className="text-5xl my-5 text-red-500" />
+        </a>
       </div>
     </div>
   );

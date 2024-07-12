@@ -5,19 +5,21 @@ const Home = () => {
   return (
     <div id="home" className="flex flex-col h-screen w-full">
       <div className="flex flex-auto flex-col lg:flex-row gap-x-24 [text-shadow:_1px_2px_3px_var(--tw-shadow-color)] shadow-black">
-        <div className="flex-auto m-6 flex items-end lg:self-center lg:relative">
+        <div className="flex-auto m-6 flex items-end min-h-[35vh] lg:self-center lg:relative">
           <h1 className="text-4xl sm:text-5xl leading-normal">
             Hi,
             <br />
             <span className="block sm:inline">I am </span>
-            <span className="text-red-500 text-7xl leading-[0.74] font-bold">
-              M
+            <span className="inline-block">
+              <span className="text-red-500 text-7xl leading-[0.74] font-bold">
+                M
+              </span>
+              atthew{" "}
+              <span className="text-red-500 text-7xl leading-[0.74] font-bold">
+                E
+              </span>
+              ng
             </span>
-            atthew{" "}
-            <span className="text-red-500 text-7xl leading-[0.74] font-bold">
-              E
-            </span>
-            ng
             <br />
             <span className="text-red-700">a web developer</span>
           </h1>

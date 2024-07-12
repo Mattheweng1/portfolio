@@ -1,5 +1,4 @@
-import { useRouteError } from "react-router-dom";
-import Navbar from "./Navbar";
+import { NavLink, useRouteError } from "react-router-dom";
 
 const ErrorPage = () => {
   const error = useRouteError();
@@ -7,7 +6,6 @@ const ErrorPage = () => {
 
   return (
     <>
-      <Navbar />
       <div
         id="error-page"
         className="fixed top-0 left-0 z-1 h-full w-full flex items-center flex-col justify-center gap-10 text-center"
@@ -19,6 +17,9 @@ const ErrorPage = () => {
             {error.statusText || error.message}
           </i>
         </p>
+        <NavLink to="/" className="text-red-500 hover:underline">
+          Return to Home
+        </NavLink>
       </div>
     </>
   );

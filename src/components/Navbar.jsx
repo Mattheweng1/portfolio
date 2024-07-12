@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaBarsStaggered, FaGithub, FaLinkedin, FaX } from "react-icons/fa6";
 import { LINKS } from "../constants/constants";
+import NavIcons from "./NavIcons";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +46,7 @@ const Navbar = () => {
         </button>
       </div>
       {isOpen && (
-        <div className="md:hidden fixed top-0 left-0 z-1 h-full w-full flex items-center flex-col justify-evenly text-5xl bg-black">
+        <div className="md:hidden fixed top-0 left-0 z-1 h-full w-full p-10 flex text-center flex-col justify-evenly text-5xl bg-black">
           <a href="#about" onClick={toggleMenu}>
             About
           </a>
@@ -55,12 +56,7 @@ const Navbar = () => {
           <a href="#contact" onClick={toggleMenu}>
             Contact
           </a>
-          <a href={LINKS.linkedIn} target="_blank" rel="noopener noreferrer">
-            <FaLinkedin />
-          </a>
-          <a href={LINKS.gitHub} target="_blank" rel="noopener noreferrer">
-            <FaGithub />
-          </a>
+          <NavIcons />
         </div>
       )}
     </nav>

@@ -1,4 +1,5 @@
 import { PiCaretDoubleDownThin } from "react-icons/pi";
+import NavIcons from "./NavIcons";
 
 const Home = () => {
   return (
@@ -32,6 +33,7 @@ const Home = () => {
           <a href="#contact">Contact</a>
         </div>
       </div>
+      <NavIcons />
       <div className="flex justify-center">
         <a href="#about">
           <PiCaretDoubleDownThin className="text-5xl my-5 text-red-500" />

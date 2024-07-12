@@ -1,7 +1,5 @@
 import FlexWrapper from "./FlexWrapper";
-import Navbar from "./Navbar";
-import PageContainer from "./PageContainer";
-import SectionTitle from "./SectionTitle";
+import TitledSection from "./TitledSection";
 import { FaReact, FaHtml5, FaCss3, FaJs, FaGitAlt } from "react-icons/fa6";
 import SkillLabel from "./SkillLabel";
 import TitledCard from "./TitledCard";
@@ -11,9 +9,7 @@ import { LINKS } from "../constants/constants";
 const About = () => {
   return (
     <>
-      <Navbar />
-      <PageContainer>
-        <SectionTitle title="About My" />
+      <TitledSection title="About My" id="about">
         <FlexWrapper className="gap-12">
           <TitledCard title="Education">
             I learned most of my front-end development skills through hands-on,
@@ -42,7 +38,8 @@ const About = () => {
             across the world while working remotely.
           </TitledCard>
         </FlexWrapper>
-        <SectionTitle title="Skills" />
+      </TitledSection>
+      <TitledSection title="Skills" id="skills">
         <FlexWrapper className="!justify-center gap-1 md:gap-3 lg:gap-5 text-3xl sm:text-6xl md:text-7xl">
           <SkillIconBox>
             <FaHtml5 className="text-orange-500"></FaHtml5>
@@ -71,7 +68,7 @@ const About = () => {
           <SkillLabel text="Jest" />
           <SkillLabel text="Webpack" />
         </FlexWrapper>
-      </PageContainer>
+      </TitledSection>
     </>
   );
 };

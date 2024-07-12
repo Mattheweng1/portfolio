@@ -35,7 +35,8 @@ const Home = () => {
           <a href="#contact">Contact</a>
         </div>
       </div>
-      <NavIcons />
+      </div>
+      <NavIcons className="mb-5" />
       <div className="flex justify-center">
         <a href="#about">
           <PiCaretDoubleDownThin className="text-5xl my-5 text-red-500" />

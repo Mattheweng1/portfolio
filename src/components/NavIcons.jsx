@@ -5,7 +5,6 @@ import { LINKS } from "../constants/constants";
 const NavIcons = ({ className }) => {
   return (
     <div className={"flex items-center gap-10 text-4xl " + className}>
-      <div className="h-1 rounded-sm flex-auto bg bg-neutral-300"></div>
       <a href={LINKS.linkedIn} target="_blank" rel="noopener noreferrer">
         <FaLinkedin />
       </a>

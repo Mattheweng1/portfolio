@@ -29,12 +29,13 @@ const Home = () => {
             className="absolute top-5 right-10 md:right-[20%] lg:top-auto lg:-bottom-[10%] lg:right-0 -z-10 h-[40vh] opacity-60 border-2 border-neutral-300"
           />
         </div>
-        <div className="flex-auto m-6 flex flex-col justify-around gap-10 lg:justify-center lg:gap-20 items-center text-5xl font-light">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+        <div className="flex-auto m-6 flex justify-end items-center text-5xl font-light">
+          <div className="flex flex-col gap-10 lg:gap-20 text-right">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
         </div>
-      </div>
       </div>
       <NavIcons className="mb-5" />
       <div className="flex justify-center">

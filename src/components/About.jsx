@@ -12,7 +12,7 @@ const About = () => {
   return (
     <>
       <TitledSection title="About My" id="about">
-        <StaggerBox staggerChildren={0.2}>
+        <StaggerBox onView staggerChildren={0.2}>
           <FlexWrapper className="gap-12">
             <TitledCard title="Education">
               I learned most of my front-end development skills through
@@ -65,6 +65,7 @@ const About = () => {
         </SlideInView>
         <StaggerBox
           className="flex flex-wrap my-16 gap-5 justify-center"
+          onView
           staggerChildren={0.1}
         >
           <SkillLabel text="HTML" />

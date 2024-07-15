@@ -1,7 +1,12 @@
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 
-const StaggerBox = ({ className, children, staggerChildren = 0 }) => {
+const StaggerBox = ({
+  className,
+  children,
+  onView = false,
+  staggerChildren = 0,
+}) => {
   const staggerBox = {
     hidden: {},
     show: {
@@ -16,7 +21,8 @@ const StaggerBox = ({ className, children, staggerChildren = 0 }) => {
       className={className}
       variants={staggerBox}
       initial="hidden"
-      whileInView="show"
+      animate={onView ? "" : "show"}
+      whileInView={onView ? "show" : ""}
       viewport={{ once: true }}
     >
       {children}
@@ -27,6 +33,7 @@ const StaggerBox = ({ className, children, staggerChildren = 0 }) => {
 StaggerBox.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
+  onView: PropTypes.bool,
   staggerChildren: PropTypes.number,
 };
 

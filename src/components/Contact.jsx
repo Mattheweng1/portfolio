@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <>
       <TitledSection title="Looking To" id="contact">
-        <StaggerBox staggerChildren={0.2}>
+        <StaggerBox onView staggerChildren={0.2}>
           <FlexWrapper className="gap-12">
             <TitledCard title="Offer Me a Job?">
               Web development is more than just a passion but what I see in my

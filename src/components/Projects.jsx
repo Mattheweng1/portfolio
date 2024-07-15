@@ -12,7 +12,7 @@ const Projects = () => {
     <>
       <TitledSection title="Projects" id="projects">
         {PROJECTS.map((item, i) => (
-          <StaggerBox key={i} staggerChildren={0.2}>
+          <StaggerBox key={i} onView staggerChildren={0.2}>
             <FlexWrapper>
               <FlexWrapperItem className="p-8">
                 <SlideInView initialX={-50}>

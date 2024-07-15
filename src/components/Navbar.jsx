@@ -4,6 +4,8 @@ import { LINKS } from "../constants/constants";
 import NavIcons from "./NavIcons";
 import SlideIn from "./SlideIn";
 import { AnimatePresence } from "framer-motion";
+import StaggerBox from "./StaggerBox";
+import StaggerItem from "./StaggerItem";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,21 +57,33 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <SlideIn
-            className="md:hidden fixed top-0 left-0 z-1 h-screen w-full p-10 flex text-right flex-col justify-evenly text-5xl font-light bg-black"
+            className="md:hidden fixed top-0 left-0 z-1 h-screen w-full p-10 bg-black"
             initialY={"-100%"}
             exitY={"-100%"}
             duration={0.5}
           >
-            <a href="#about" onClick={toggleMenu}>
-              About
-            </a>
-            <a href="#projects" onClick={toggleMenu}>
-              Projects
-            </a>
-            <a href="#contact" onClick={toggleMenu}>
-              Contact
-            </a>
-            <NavIcons />
+            <StaggerBox
+              className="h-full flex text-right flex-col justify-evenly text-5xl font-light"
+              onView
+              staggerChildren={0.2}
+            >
+              <StaggerItem initialX={100} duration={1}>
+                <a href="#about" onClick={toggleMenu}>
+                  About
+                </a>
+              </StaggerItem>
+              <StaggerItem initialX={100} duration={1}>
+                <a href="#projects" onClick={toggleMenu}>
+                  Projects
+                </a>
+              </StaggerItem>
+              <StaggerItem initialX={100} duration={1}>
+                <a href="#contact" onClick={toggleMenu}>
+                  Contact
+                </a>
+              </StaggerItem>
+              <NavIcons />
+            </StaggerBox>
           </SlideIn>
         )}
       </AnimatePresence>

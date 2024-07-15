@@ -22,9 +22,7 @@ const Projects = () => {
               </SlideInView>
             </FlexWrapperItem>
             <FlexWrapperItem className="lg:items-start">
-              <SlideInView initialX={50}>
-                <ProjectDetails project={item} />
-              </SlideInView>
+              <ProjectDetails project={item} />
             </FlexWrapperItem>
           </FlexWrapper>
         ))}

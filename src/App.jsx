@@ -8,6 +8,7 @@ import { PiCaretDoubleUpThin } from "react-icons/pi";
 import { useEffect, useState } from "react";
 import Swaying from "./components/Swaying";
 import SlideInView from "./components/SlideInView";
+import { AnimatePresence } from "framer-motion";
 
 const App = () => {
   const [isVisibleNavbar, setIsVisibleNavbar] = useState(false);
@@ -32,7 +33,7 @@ const App = () => {
 
   return (
     <>
-      {isVisibleNavbar && <Navbar />}
+      <AnimatePresence>{isVisibleNavbar && <Navbar />}</AnimatePresence>
       <PageContainer>
         <Home />
         <About />

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { easeOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const SlideIn = ({
   className,
@@ -19,7 +19,7 @@ const SlideIn = ({
       animate={{ x: 0, y: 0, opacity: finalOpacity, scaleX: 1 }}
       transition={{
         duration: duration,
-        ease: easeOut,
+        ease: "easeOut",
         delay: delay,
         type: spring ? "spring" : "",
       }}

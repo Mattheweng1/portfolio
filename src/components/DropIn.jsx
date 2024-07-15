@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { easeIn, easeOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const DropIn = ({ className, children, delay }) => {
   const plusOrMinus = Math.random() < 0.5 ? -1 : 1;
@@ -14,7 +14,7 @@ const DropIn = ({ className, children, delay }) => {
         transition={{
           delay: delay,
           duration: 0.4,
-          ease: easeOut,
+          ease: "easeOut",
           type: "spring",
         }}
       >
@@ -29,7 +29,7 @@ const DropIn = ({ className, children, delay }) => {
           rotate: rotate,
           transitionEnd: { display: "none" },
         }}
-        transition={{ delay: delay, duration: 0.4, ease: easeIn }}
+        transition={{ delay: delay, duration: 0.4, ease: "easeIn" }}
       >
         {children}
       </motion.span>

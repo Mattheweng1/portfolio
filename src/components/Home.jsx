@@ -1,40 +1,68 @@
 import { PiCaretDoubleDownThin } from "react-icons/pi";
 import NavIcons from "./NavIcons";
+import DropIn from "./DropIn";
+import SlideIn from "./SlideIn";
 
 const Home = () => {
   return (
     <div id="home" className="flex flex-col h-screen w-full">
       <div className="flex flex-auto flex-col lg:flex-row gap-x-24 [text-shadow:_1px_2px_3px_var(--tw-shadow-color)] shadow-black">
         <div className="flex-auto m-6 flex items-end min-h-[35vh] lg:self-center lg:relative">
-          <h1 className="text-4xl sm:text-5xl leading-normal">
+          <SlideIn
+            className="text-4xl sm:text-5xl leading-normal"
+            initialX={-100}
+            duration={1}
+            spring
+          >
             Hi,
             <br />
             <span className="block sm:inline">I am </span>
             <span className="inline-block">
-              <span className="text-red-500 text-7xl leading-[0.74] font-bold">
+              <DropIn
+                className="text-red-500 text-7xl leading-[0.74] font-bold"
+                delay={1}
+              >
                 M
-              </span>
+              </DropIn>
               atthew{" "}
-              <span className="text-red-500 text-7xl leading-[0.74] font-bold">
+              <DropIn
+                className="text-red-500 text-7xl leading-[0.74] font-bold"
+                delay={1.3}
+              >
                 E
-              </span>
+              </DropIn>
               ng
             </span>
             <br />
-            <span className="text-red-700">a web developer</span>
-          </h1>
-          <img
-            src="src/assets/Profile Photo 2023.JPEG"
-            alt="Profile Photo"
+            <DropIn className="text-red-700" delay={2}>
+              a web developer
+            </DropIn>
+          </SlideIn>
+          <SlideIn
             className="absolute top-5 right-10 md:right-[20%] lg:top-auto lg:-bottom-[10%] lg:right-0 -z-10 h-[40vh] opacity-60 border-2 border-neutral-300"
-          />
+            initialX={100}
+            finalOpacity={0.6}
+            duration={1}
+            spring
+          >
+            <img
+              src="src/assets/Profile Photo 2023.JPEG"
+              alt="Profile Photo"
+              className="h-full"
+            />
+          </SlideIn>
         </div>
         <div className="flex-auto m-6 flex justify-end text-5xl font-light lg:h-[35vh] lg:self-center">
-          <div className="flex flex-col justify-evenly lg:justify-between text-right">
+          <SlideIn
+            className="flex flex-col justify-evenly lg:justify-between text-right"
+            initialX={100}
+            duration={1}
+            spring
+          >
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
-          </div>
+          </SlideIn>
         </div>
       </div>
       <NavIcons className="mb-5" />

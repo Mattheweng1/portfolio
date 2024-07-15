@@ -41,7 +41,7 @@ const About = () => {
         </FlexWrapper>
       </TitledSection>
       <TitledSection title="Skills" id="skills">
-        <SlideInView initialX={-100}>
+        <SlideInView initialX={-50}>
           <FlexWrapper className="!justify-center gap-1 md:gap-3 lg:gap-5 text-3xl sm:text-6xl md:text-7xl">
             <SkillIconBox duration={5}>
               <FaHtml5 className="text-orange-500"></FaHtml5>

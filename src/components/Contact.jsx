@@ -33,7 +33,7 @@ const Contact = () => {
           </TitledCard>
         </FlexWrapper>
         <FlexWrapper className="items-center !justify-center gap-5">
-          <SlideInView initialX={-100}>
+          <SlideInView initialX={-50}>
             <FlexWrapper className="items-center !justify-center gap-5">
               <div className="text-2xl font-light">Visit my</div>
               <Button isLink href={LINKS.linkedIn}>
@@ -44,7 +44,7 @@ const Contact = () => {
           </SlideInView>
           <SlideInView
             className="rounded-lg mx-auto w-full lg:w-2/3 xl:w-1/2"
-            initialX={100}
+            initialX={50}
           >
             <ContactForm />
           </SlideInView>

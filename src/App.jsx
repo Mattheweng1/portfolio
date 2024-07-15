@@ -40,7 +40,7 @@ const App = () => {
         <Contact />
         <div className="flex justify-center">
           <a href="#home">
-            <SlideInView>
+            <SlideInView duration={1}>
               <Swaying initialY={5} duration={1}>
                 <PiCaretDoubleUpThin className="text-5xl my-5 text-red-500" />
               </Swaying>

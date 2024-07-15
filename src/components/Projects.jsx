@@ -13,7 +13,7 @@ const Projects = () => {
         {PROJECTS.map((item, i) => (
           <FlexWrapper key={i}>
             <FlexWrapperItem className="p-8">
-              <SlideInView initialX={-100}>
+              <SlideInView initialX={-50}>
                 <img
                   className="rounded-2xl border-2 border-neutral-500"
                   src={item.image.src}
@@ -22,13 +22,13 @@ const Projects = () => {
               </SlideInView>
             </FlexWrapperItem>
             <FlexWrapperItem className="lg:items-start">
-              <SlideInView initialX={100}>
+              <SlideInView initialX={50}>
                 <ProjectDetails project={item} />
               </SlideInView>
             </FlexWrapperItem>
           </FlexWrapper>
         ))}
-        <SlideInView initialY={100}>
+        <SlideInView initialY={50}>
           <FlexWrapper className="items-center !justify-center gap-5">
             <div className="text-2xl font-light">Visit my</div>
             <Button isLink href={LINKS.gitHub}>

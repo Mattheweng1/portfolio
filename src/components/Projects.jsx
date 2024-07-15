@@ -5,26 +5,29 @@ import TitledSection from "./TitledSection";
 import ProjectDetails from "./ProjectDetails";
 import Button from "./Button";
 import SlideInView from "./SlideInView";
+import StaggerBox from "./StaggerBox";
 
 const Projects = () => {
   return (
     <>
       <TitledSection title="Projects" id="projects">
         {PROJECTS.map((item, i) => (
-          <FlexWrapper key={i}>
-            <FlexWrapperItem className="p-8">
-              <SlideInView initialX={-50}>
-                <img
-                  className="rounded-2xl border-2 border-neutral-500"
-                  src={item.image.src}
-                  alt={item.image.alt}
-                />
-              </SlideInView>
-            </FlexWrapperItem>
-            <FlexWrapperItem className="lg:items-start">
-              <ProjectDetails project={item} />
-            </FlexWrapperItem>
-          </FlexWrapper>
+          <StaggerBox key={i} staggerChildren={0.2}>
+            <FlexWrapper>
+              <FlexWrapperItem className="p-8">
+                <SlideInView initialX={-50}>
+                  <img
+                    className="rounded-2xl border-2 border-neutral-500"
+                    src={item.image.src}
+                    alt={item.image.alt}
+                  />
+                </SlideInView>
+              </FlexWrapperItem>
+              <FlexWrapperItem className="lg:items-start">
+                <ProjectDetails project={item} />
+              </FlexWrapperItem>
+            </FlexWrapper>
+          </StaggerBox>
         ))}
         <SlideInView initialY={50}>
           <FlexWrapper className="items-center !justify-center gap-5">

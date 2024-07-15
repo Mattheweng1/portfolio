@@ -2,11 +2,10 @@ import PropTypes from "prop-types";
 import React from "react";
 import Button from "./Button";
 import StaggerItem from "./StaggerItem";
-import StaggerBox from "./StaggerBox";
 
 const ProjectDetails = ({ project }) => {
   return (
-    <StaggerBox staggerChildren={0.2}>
+    <>
       <StaggerItem initialX={50} duration={0.75}>
         <h1 className="text-xl font-bold text-red-500">{project.title}</h1>
       </StaggerItem>
@@ -31,7 +30,7 @@ const ProjectDetails = ({ project }) => {
           Code
         </Button>
       </StaggerItem>
-    </StaggerBox>
+    </>
   );
 };
 

@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import { PiCaretDoubleUpThin } from "react-icons/pi";
 import { useEffect, useState } from "react";
+import Swaying from "./components/Swaying";
 
 const App = () => {
   const [isVisibleNavbar, setIsVisibleNavbar] = useState(false);
@@ -36,11 +37,11 @@ const App = () => {
         <About />
         <Projects />
         <Contact />
-        <div className="flex justify-center">
+        <Swaying className="flex justify-center" initialY={5} duration={1}>
           <a href="#home">
             <PiCaretDoubleUpThin className="text-5xl my-5 text-red-500" />
           </a>
-        </div>
+        </Swaying>
       </PageContainer>
     </>
   );

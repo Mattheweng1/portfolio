@@ -2,6 +2,7 @@ import { PiCaretDoubleDownThin } from "react-icons/pi";
 import NavIcons from "./NavIcons";
 import DropIn from "./DropIn";
 import SlideIn from "./SlideIn";
+import Swaying from "./Swaying";
 
 const Home = () => {
   return (
@@ -66,11 +67,13 @@ const Home = () => {
         </div>
       </div>
       <NavIcons className="mb-5" />
-      <div className="flex justify-center">
-        <a href="#about">
-          <PiCaretDoubleDownThin className="text-5xl my-5 text-red-500" />
-        </a>
-      </div>
+      <SlideIn>
+        <Swaying className="flex justify-center" initialY={5} duration={1}>
+          <a href="#about">
+            <PiCaretDoubleDownThin className="text-5xl my-5 text-red-500" />
+          </a>
+        </Swaying>
+      </SlideIn>
     </div>
   );
 };

@@ -37,11 +37,13 @@ const App = () => {
         <About />
         <Projects />
         <Contact />
-        <Swaying className="flex justify-center" initialY={5} duration={1}>
+        <div className="flex justify-center">
           <a href="#home">
-            <PiCaretDoubleUpThin className="text-5xl my-5 text-red-500" />
+            <Swaying initialY={5} duration={1}>
+              <PiCaretDoubleUpThin className="text-5xl my-5 text-red-500" />
+            </Swaying>
           </a>
-        </Swaying>
+        </div>
       </PageContainer>
     </>
   );

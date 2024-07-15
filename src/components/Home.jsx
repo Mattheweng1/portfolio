@@ -68,11 +68,13 @@ const Home = () => {
       </div>
       <NavIcons className="mb-5" />
       <SlideIn>
-        <Swaying className="flex justify-center" initialY={5} duration={1}>
+        <div className="flex justify-center">
           <a href="#about">
-            <PiCaretDoubleDownThin className="text-5xl my-5 text-red-500" />
+            <Swaying initialY={5} duration={1}>
+              <PiCaretDoubleDownThin className="text-5xl my-5 text-red-500" />
+            </Swaying>
           </a>
-        </Swaying>
+        </div>
       </SlideIn>
     </div>
   );

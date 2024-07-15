@@ -17,6 +17,7 @@ const SlideInView = ({
       className={className}
       initial={{ x: initialX, y: initialY, opacity: 0, scaleX: scaleX ? 0 : 1 }}
       whileInView={{ x: 0, y: 0, opacity: finalOpacity, scaleX: 1 }}
+      viewport={{ once: true }}
       transition={{
         duration: duration,
         ease: "easeOut",

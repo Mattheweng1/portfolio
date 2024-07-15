@@ -17,6 +17,7 @@ const StaggerBox = ({ className, children, staggerChildren = 0 }) => {
       variants={staggerBox}
       initial="hidden"
       whileInView="show"
+      viewport={{ once: true }}
     >
       {children}
     </motion.div>

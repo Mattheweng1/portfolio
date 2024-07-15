@@ -5,6 +5,7 @@ import SkillLabel from "./SkillLabel";
 import TitledCard from "./TitledCard";
 import SkillIconBox from "./SkillIconBox";
 import { LINKS } from "../constants/constants";
+import SlideInView from "./SlideInView";
 
 const About = () => {
   return (
@@ -40,23 +41,25 @@ const About = () => {
         </FlexWrapper>
       </TitledSection>
       <TitledSection title="Skills" id="skills">
-        <FlexWrapper className="!justify-center gap-1 md:gap-3 lg:gap-5 text-3xl sm:text-6xl md:text-7xl">
-          <SkillIconBox duration={5}>
-            <FaHtml5 className="text-orange-500"></FaHtml5>
-          </SkillIconBox>
-          <SkillIconBox duration={2.5}>
-            <FaCss3 className="text-blue-500"></FaCss3>
-          </SkillIconBox>
-          <SkillIconBox duration={2}>
-            <FaJs className="text-yellow-400"></FaJs>
-          </SkillIconBox>
-          <SkillIconBox duration={6}>
-            <FaGitAlt className="text-orange-600"></FaGitAlt>
-          </SkillIconBox>
-          <SkillIconBox duration={3}>
-            <FaReact className="text-cyan-400"></FaReact>
-          </SkillIconBox>
-        </FlexWrapper>
+        <SlideInView initialX={-100}>
+          <FlexWrapper className="!justify-center gap-1 md:gap-3 lg:gap-5 text-3xl sm:text-6xl md:text-7xl">
+            <SkillIconBox duration={5}>
+              <FaHtml5 className="text-orange-500"></FaHtml5>
+            </SkillIconBox>
+            <SkillIconBox duration={2.5}>
+              <FaCss3 className="text-blue-500"></FaCss3>
+            </SkillIconBox>
+            <SkillIconBox duration={2}>
+              <FaJs className="text-yellow-400"></FaJs>
+            </SkillIconBox>
+            <SkillIconBox duration={6}>
+              <FaGitAlt className="text-orange-600"></FaGitAlt>
+            </SkillIconBox>
+            <SkillIconBox duration={3}>
+              <FaReact className="text-cyan-400"></FaReact>
+            </SkillIconBox>
+          </FlexWrapper>
+        </SlideInView>
         <FlexWrapper className="gap-5 !justify-center">
           <SkillLabel text="HTML" />
           <SkillLabel text="CSS" />

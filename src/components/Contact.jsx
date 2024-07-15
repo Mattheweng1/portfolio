@@ -4,6 +4,7 @@ import ContactForm from "./ContactForm";
 import FlexWrapper from "./FlexWrapper";
 import TitledSection from "./TitledSection";
 import TitledCard from "./TitledCard";
+import SlideInView from "./SlideInView";
 
 const Contact = () => {
   return (
@@ -32,12 +33,21 @@ const Contact = () => {
           </TitledCard>
         </FlexWrapper>
         <FlexWrapper className="items-center !justify-center gap-5">
-          <div className="text-2xl font-light">Visit my</div>
-          <Button isLink href={LINKS.linkedIn}>
-            LinkedIn
-          </Button>
-          <div className="text-2xl font-light">or fill out this</div>
-          <ContactForm />
+          <SlideInView initialX={-100}>
+            <FlexWrapper className="items-center !justify-center gap-5">
+              <div className="text-2xl font-light">Visit my</div>
+              <Button isLink href={LINKS.linkedIn}>
+                LinkedIn
+              </Button>
+              <div className="text-2xl font-light">or fill out this</div>
+            </FlexWrapper>
+          </SlideInView>
+          <SlideInView
+            className="rounded-lg mx-auto w-full lg:w-2/3 xl:w-1/2"
+            initialX={100}
+          >
+            <ContactForm />
+          </SlideInView>
         </FlexWrapper>
       </TitledSection>
     </>

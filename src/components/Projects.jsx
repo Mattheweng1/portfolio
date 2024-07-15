@@ -4,6 +4,7 @@ import FlexWrapperItem from "./FlexWrapperItem";
 import TitledSection from "./TitledSection";
 import ProjectDetails from "./ProjectDetails";
 import Button from "./Button";
+import SlideInView from "./SlideInView";
 
 const Projects = () => {
   return (
@@ -12,24 +13,30 @@ const Projects = () => {
         {PROJECTS.map((item, i) => (
           <FlexWrapper key={i}>
             <FlexWrapperItem className="p-8">
-              <img
-                className="rounded-2xl border-2 border-neutral-500"
-                src={item.image.src}
-                alt={item.image.alt}
-              />
+              <SlideInView initialX={-100}>
+                <img
+                  className="rounded-2xl border-2 border-neutral-500"
+                  src={item.image.src}
+                  alt={item.image.alt}
+                />
+              </SlideInView>
             </FlexWrapperItem>
             <FlexWrapperItem className="lg:items-start">
-              <ProjectDetails project={item} />
+              <SlideInView initialX={100}>
+                <ProjectDetails project={item} />
+              </SlideInView>
             </FlexWrapperItem>
           </FlexWrapper>
         ))}
-        <FlexWrapper className="items-center !justify-center gap-5">
-          <div className="text-2xl font-light">Visit my</div>
-          <Button isLink href={LINKS.gitHub}>
-            GitHub
-          </Button>
-          <div className="text-2xl font-light">to see more</div>
-        </FlexWrapper>
+        <SlideInView initialY={100}>
+          <FlexWrapper className="items-center !justify-center gap-5">
+            <div className="text-2xl font-light">Visit my</div>
+            <Button isLink href={LINKS.gitHub}>
+              GitHub
+            </Button>
+            <div className="text-2xl font-light">to see more</div>
+          </FlexWrapper>
+        </SlideInView>
       </TitledSection>
     </>
   );

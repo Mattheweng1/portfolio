@@ -6,6 +6,7 @@ import TitledCard from "./TitledCard";
 import SkillIconBox from "./SkillIconBox";
 import { LINKS } from "../constants/constants";
 import SlideInView from "./SlideInView";
+import StaggerBox from "./StaggerBox";
 
 const About = () => {
   return (
@@ -60,7 +61,10 @@ const About = () => {
             </SkillIconBox>
           </FlexWrapper>
         </SlideInView>
-        <FlexWrapper className="gap-5 !justify-center">
+        <StaggerBox
+          className="flex flex-wrap my-16 gap-5 justify-center"
+          staggerChildren={0.1}
+        >
           <SkillLabel text="HTML" />
           <SkillLabel text="CSS" />
           <SkillLabel text="JavaScript" />
@@ -70,7 +74,7 @@ const About = () => {
           <SkillLabel text="Git" />
           <SkillLabel text="Jest" />
           <SkillLabel text="Webpack" />
-        </FlexWrapper>
+        </StaggerBox>
       </TitledSection>
     </>
   );

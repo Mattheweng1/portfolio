@@ -37,8 +37,7 @@ export const PROJECTS = [
       "A personal portfolio website showcasing projects, skills, and contact information. It's the website you're on right now!",
     technologies: ["HTML", "React", "Tailwind", "Framer Motion"],
     link: {
-      // TODO: Add live link after deploying
-      live: undefined,
+      live: "https://mattheweng1.github.io/portfolio/",
       code: "https://github.com/Mattheweng1/portfolio",
     },
   },

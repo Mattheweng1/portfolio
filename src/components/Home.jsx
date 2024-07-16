@@ -3,6 +3,8 @@ import NavIcons from "./NavIcons";
 import DropIn from "./DropIn";
 import SlideIn from "./SlideIn";
 import Swaying from "./Swaying";
+import StaggerBox from "./StaggerBox";
+import StaggerItem from "./StaggerItem";
 
 const Home = () => {
   return (
@@ -54,16 +56,26 @@ const Home = () => {
           </SlideIn>
         </div>
         <div className="flex-auto m-6 flex justify-end text-5xl font-light lg:h-[35vh] lg:self-center">
-          <SlideIn
+          <StaggerBox
             className="flex flex-col justify-evenly lg:justify-between text-right"
-            initialX={100}
-            duration={1}
-            spring
+            staggerChildren={0.2}
           >
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-          </SlideIn>
+            <a href="#about">
+              <StaggerItem initialX={100} duration={1} spring>
+                About
+              </StaggerItem>
+            </a>
+            <a href="#projects">
+              <StaggerItem initialX={100} duration={1} spring>
+                Projects
+              </StaggerItem>
+            </a>
+            <a href="#contact">
+              <StaggerItem initialX={100} duration={1} spring>
+                Contact
+              </StaggerItem>
+            </a>
+          </StaggerBox>
         </div>
       </div>
       <NavIcons animateOnce className="mb-5" />

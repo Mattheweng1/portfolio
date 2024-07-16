@@ -5,6 +5,7 @@ const StaggerBox = ({
   className,
   children,
   onView = false,
+  once = false,
   staggerChildren = 0,
 }) => {
   const staggerBox = {
@@ -23,7 +24,7 @@ const StaggerBox = ({
       initial="hidden"
       animate={onView ? "" : "show"}
       whileInView={onView ? "show" : ""}
-      viewport={{ once: true }}
+      viewport={{ once: once }}
     >
       {children}
     </motion.div>
@@ -34,6 +35,7 @@ StaggerBox.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   onView: PropTypes.bool,
+  once: PropTypes.bool,
   staggerChildren: PropTypes.number,
 };
 

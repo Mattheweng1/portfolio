@@ -6,6 +6,7 @@ const TitledSection = ({ title, id, children }) => {
     <div id={id} className="pt-32">
       <SlideInView
         className="mb-16 text-7xl text-center font-light"
+        once
         initialY={-50}
       >
         {title}

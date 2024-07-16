@@ -15,7 +15,7 @@ const Projects = () => {
           <StaggerBox key={i} onView once staggerChildren={0.2}>
             <FlexWrapper>
               <FlexWrapperItem className="p-8">
-                <SlideInView initialX={-50}>
+                <SlideInView once initialX={-50}>
                   <img
                     className="rounded-2xl border-2 border-neutral-500"
                     src={item.image.src}
@@ -29,7 +29,7 @@ const Projects = () => {
             </FlexWrapper>
           </StaggerBox>
         ))}
-        <SlideInView initialY={50}>
+        <SlideInView once initialY={50}>
           <FlexWrapper className="items-center !justify-center gap-5">
             <div className="text-2xl font-light">Visit my</div>
             <Button isLink href={LINKS.gitHub}>

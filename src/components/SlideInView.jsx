@@ -8,6 +8,7 @@ const SlideInView = ({
   initialY = 0,
   finalOpacity = 1,
   scaleX = false,
+  once = false,
   duration = 0.75,
   delay = 0,
   spring = false,
@@ -17,7 +18,7 @@ const SlideInView = ({
       className={className}
       initial={{ x: initialX, y: initialY, opacity: 0, scaleX: scaleX ? 0 : 1 }}
       whileInView={{ x: 0, y: 0, opacity: finalOpacity, scaleX: 1 }}
-      viewport={{ once: true }}
+      viewport={{ once: once }}
       transition={{
         duration: duration,
         ease: "easeOut",
@@ -37,6 +38,7 @@ SlideInView.propTypes = {
   initialY: PropTypes.number,
   finalOpacity: PropTypes.number,
   scaleX: PropTypes.bool,
+  once: PropTypes.bool,
   duration: PropTypes.number,
   delay: PropTypes.number,
   spring: PropTypes.bool,

@@ -66,7 +66,7 @@ const Home = () => {
           </SlideIn>
         </div>
       </div>
-      <NavIcons className="mb-5" />
+      <NavIcons animateOnce className="mb-5" />
       <SlideIn duration={1}>
         <div className="flex justify-center">
           <a href="#about">

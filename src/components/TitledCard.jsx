@@ -9,7 +9,7 @@ const TitledCard = ({ title, children }) => {
       duration={0.75}
     >
       <h1 className="text-red-500 mb-6 text-3xl font-light">{title}</h1>
-      <p className="text-xl">{children}</p>
+      <div className="text-xl">{children}</div>
     </StaggerItem>
   );
 };

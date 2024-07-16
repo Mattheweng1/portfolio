@@ -22,7 +22,7 @@ const HoverTap = ({
   spring = false,
 }) => {
   return (
-    <motion.span
+    <motion.div
       className={className}
       initial={{
         x: 0,
@@ -55,7 +55,7 @@ const HoverTap = ({
       }}
     >
       {children}
-    </motion.span>
+    </motion.div>
   );
 };
 

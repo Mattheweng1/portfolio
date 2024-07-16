@@ -8,10 +8,12 @@ const HoverTap = ({
   hoveredX = 0,
   hoveredScale = 1,
   hoveredScaleX = 1,
+  hoveredScaleY = 1,
   hoveredColor = "#ef4444",
   tappedX = 0,
   tappedScale = 1,
   tappedScaleX = 1,
+  tappedScaleY = 1,
   tappedColor = "#ef4444",
   duration = 0.3,
   spring = false,
@@ -23,18 +25,21 @@ const HoverTap = ({
         x: 0,
         scale: 1,
         scaleX: 1,
+        scaleY: 1,
         color: initialColor,
       }}
       whileHover={{
         x: hoveredX,
         scale: hoveredScale,
         scaleX: hoveredScaleX,
+        scaleY: hoveredScaleY,
         color: hoveredColor,
       }}
       whileTap={{
         x: tappedX,
         scale: tappedScale,
         scaleX: tappedScaleX,
+        scaleY: tappedScaleY,
         color: tappedColor,
       }}
       transition={{
@@ -55,10 +60,12 @@ HoverTap.propTypes = {
   hoveredX: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   hoveredScale: PropTypes.number,
   hoveredScaleX: PropTypes.number,
+  hoveredScaleY: PropTypes.number,
   hoveredColor: PropTypes.string,
   tappedX: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   tappedScale: PropTypes.number,
   tappedScaleX: PropTypes.number,
+  tappedScaleY: PropTypes.number,
   tappedColor: PropTypes.string,
   duration: PropTypes.number,
   spring: PropTypes.bool,

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const Button = ({ className, children, href, isLink, type, disabled }) => {
-  const classNameString =
+  className =
     "border-2 border-red-500 text-red-500 px-10 py-3 rounded-md font-bold " +
     className;
 
@@ -10,12 +10,12 @@ const Button = ({ className, children, href, isLink, type, disabled }) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={classNameString}
+      className={className}
     >
       {children}
     </a>
   ) : (
-    <button type={type} disabled={disabled} className={classNameString}>
+    <button type={type} disabled={disabled} className={className}>
       {children}
     </button>
   );

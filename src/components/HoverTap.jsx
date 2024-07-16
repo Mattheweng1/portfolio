@@ -5,21 +5,24 @@ const HoverTap = ({
   className,
   children,
   initialColor = "#d4d4d4",
+  initialBackgroundColor = "transparent",
   hoveredX = 0,
   hoveredScale = 1,
   hoveredScaleX = 1,
   hoveredScaleY = 1,
   hoveredColor = "#ef4444",
+  hoveredBackgroundColor = "transparent",
   tappedX = 0,
   tappedScale = 1,
   tappedScaleX = 1,
   tappedScaleY = 1,
   tappedColor = "#ef4444",
+  tappedBackgroundColor = "transparent",
   duration = 0.3,
   spring = false,
 }) => {
   return (
-    <motion.div
+    <motion.span
       className={className}
       initial={{
         x: 0,
@@ -27,6 +30,7 @@ const HoverTap = ({
         scaleX: 1,
         scaleY: 1,
         color: initialColor,
+        backgroundColor: initialBackgroundColor,
       }}
       whileHover={{
         x: hoveredX,
@@ -34,6 +38,7 @@ const HoverTap = ({
         scaleX: hoveredScaleX,
         scaleY: hoveredScaleY,
         color: hoveredColor,
+        backgroundColor: hoveredBackgroundColor,
       }}
       whileTap={{
         x: tappedX,
@@ -41,6 +46,7 @@ const HoverTap = ({
         scaleX: tappedScaleX,
         scaleY: tappedScaleY,
         color: tappedColor,
+        backgroundColor: tappedBackgroundColor,
       }}
       transition={{
         duration: duration,
@@ -49,7 +55,7 @@ const HoverTap = ({
       }}
     >
       {children}
-    </motion.div>
+    </motion.span>
   );
 };
 
@@ -57,16 +63,19 @@ HoverTap.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   initialColor: PropTypes.string,
+  initialBackgroundColor: PropTypes.string,
   hoveredX: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   hoveredScale: PropTypes.number,
   hoveredScaleX: PropTypes.number,
   hoveredScaleY: PropTypes.number,
   hoveredColor: PropTypes.string,
+  hoveredBackgroundColor: PropTypes.string,
   tappedX: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   tappedScale: PropTypes.number,
   tappedScaleX: PropTypes.number,
   tappedScaleY: PropTypes.number,
   tappedColor: PropTypes.string,
+  tappedBackgroundColor: PropTypes.string,
   duration: PropTypes.number,
   spring: PropTypes.bool,
 };

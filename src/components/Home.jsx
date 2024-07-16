@@ -5,6 +5,7 @@ import SlideIn from "./SlideIn";
 import Swaying from "./Swaying";
 import StaggerBox from "./StaggerBox";
 import MenuLink from "./MenuLink";
+import HoverTap from "./HoverTap";
 
 const Home = () => {
   return (
@@ -69,12 +70,20 @@ const Home = () => {
       </div>
       <NavIcons className="mb-5" />
       <SlideIn duration={1}>
-        <div className="flex justify-center">
-          <a href="#about">
-            <Swaying initialY={5} duration={1}>
-              <PiCaretDoubleDownThin className="text-5xl my-5 text-red-500" />
-            </Swaying>
-          </a>
+        <div className="flex justify-center text-5xl my-5 text-red-500">
+          <HoverTap
+            initialColor="rgb(239 68 68 1)"
+            hoveredColor="rgb(185 28 28 1)"
+            tappedColor="rgb(185 28 28 1)"
+            hoveredScale={1.1}
+            spring
+          >
+            <a href="#about">
+              <Swaying initialY={5} duration={1}>
+                <PiCaretDoubleDownThin />
+              </Swaying>
+            </a>
+          </HoverTap>
         </div>
       </SlideIn>
     </div>

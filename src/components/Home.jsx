@@ -58,6 +58,7 @@ const Home = () => {
         <div className="flex-auto m-6 flex justify-end text-5xl font-light lg:h-[35vh] lg:self-center">
           <StaggerBox
             className="flex flex-col justify-evenly lg:justify-between text-right"
+            onView
             staggerChildren={0.2}
           >
             <a href="#about">
@@ -78,7 +79,7 @@ const Home = () => {
           </StaggerBox>
         </div>
       </div>
-      <NavIcons animateOnce className="mb-5" />
+      <NavIcons className="mb-5" />
       <SlideIn duration={1}>
         <div className="flex justify-center">
           <a href="#about">

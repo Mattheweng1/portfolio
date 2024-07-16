@@ -29,7 +29,7 @@ const Navbar = () => {
       className="flex items-center justify-between fixed top-0 left-0 w-screen px-10 py-8 bg-gradient-to-b from-black via-black z-50"
       initialY={"-100%"}
       exitY={"-100%"}
-      duration={1}
+      duration={0.5}
     >
       <a
         href="#home"

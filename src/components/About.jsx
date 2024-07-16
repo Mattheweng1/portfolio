@@ -7,6 +7,7 @@ import SkillIconBox from "./SkillIconBox";
 import { LINKS } from "../constants/constants";
 import SlideInView from "./SlideInView";
 import StaggerBox from "./StaggerBox";
+import HoverTap from "./HoverTap";
 
 const About = () => {
   return (
@@ -17,14 +18,22 @@ const About = () => {
             <TitledCard title="Education">
               I learned most of my front-end development skills through
               hands-on, project-based learning with{" "}
-              <a
-                href={LINKS.theOdinProject}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-red-500"
+              <HoverTap
+                className="inline-block"
+                initialColor="#ef4444"
+                hoveredColor="#b91c1c"
+                tappedColor="#b91c1c"
+                hoveredScale={1.05}
+                duration={0.1}
               >
-                The Odin Project
-              </a>
+                <a
+                  href={LINKS.theOdinProject}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Odin Project
+                </a>
+              </HoverTap>
               . It taught me many concepts, but most importantly, it taught me
               how to problem solve.
             </TitledCard>

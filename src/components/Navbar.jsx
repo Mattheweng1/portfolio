@@ -32,7 +32,12 @@ const Navbar = () => {
       exitY={"-100%"}
       duration={0.5}
     >
-      <HoverTap hoveredScale={1.1} hoveredColor="#b91c1c" tappedColor="#b91c1c">
+      <HoverTap
+        hoveredScale={1.1}
+        hoveredColor="#b91c1c"
+        tappedColor="#b91c1c"
+        duration={0.2}
+      >
         <a
           href="#home"
           className="flex flex-shrink-0 items-end font-bold select-none z-10"
@@ -42,24 +47,34 @@ const Navbar = () => {
         </a>
       </HoverTap>
       <div className="items-center justify-center gap-4 text-xl hidden md:flex">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a href={LINKS.linkedIn} target="_blank" rel="noopener noreferrer">
-          <FaLinkedin />
-        </a>
-        <a href={LINKS.gitHub} target="_blank" rel="noopener noreferrer">
-          <FaGithub />
-        </a>
+        <HoverTap hoveredScale={1.1} duration={0.2}>
+          <a href="#about">About</a>
+        </HoverTap>
+        <HoverTap hoveredScale={1.1} duration={0.2}>
+          <a href="#projects">Projects</a>
+        </HoverTap>
+        <HoverTap hoveredScale={1.1} duration={0.2}>
+          <a href="#contact">Contact</a>
+        </HoverTap>
+        <HoverTap hoveredScale={1.1} duration={0.2}>
+          <a href={LINKS.linkedIn} target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
+        </HoverTap>
+        <HoverTap hoveredScale={1.1} duration={0.2}>
+          <a href={LINKS.gitHub} target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+          </a>
+        </HoverTap>
       </div>
       <div className="md:hidden z-10">
         <button onClick={toggleMenu}>
           {isOpen ? (
-            <HoverTap hoveredScale={1.2}>
+            <HoverTap hoveredScale={1.2} duration={0.2}>
               <FaX />
             </HoverTap>
           ) : (
-            <HoverTap hoveredScale={1.2}>
+            <HoverTap hoveredScale={1.2} duration={0.2}>
               <FaBarsStaggered />
             </HoverTap>
           )}

@@ -30,8 +30,8 @@ const StaggerItem = ({
 
 StaggerItem.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node.isRequired,
-  initialX: PropTypes.number,
+  children: PropTypes.node,
+  initialX: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   duration: PropTypes.number,
   spring: PropTypes.bool,
 };

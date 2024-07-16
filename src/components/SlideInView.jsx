@@ -33,9 +33,9 @@ const SlideInView = ({
 
 SlideInView.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node.isRequired,
-  initialX: PropTypes.number,
-  initialY: PropTypes.number,
+  children: PropTypes.node,
+  initialX: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  initialY: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   finalOpacity: PropTypes.number,
   scaleX: PropTypes.bool,
   once: PropTypes.bool,

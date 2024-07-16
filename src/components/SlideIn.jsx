@@ -39,13 +39,13 @@ const SlideIn = ({
 
 SlideIn.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node.isRequired,
-  initialX: PropTypes.number,
-  initialY: PropTypes.number,
+  children: PropTypes.node,
+  initialX: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  initialY: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   finalOpacity: PropTypes.number,
   scaleX: PropTypes.bool,
-  exitX: PropTypes.number,
-  exitY: PropTypes.number,
+  exitX: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  exitY: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   duration: PropTypes.number,
   delay: PropTypes.number,
   spring: PropTypes.bool,

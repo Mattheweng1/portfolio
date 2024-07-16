@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import TextArea from "./TextArea";
 import { useState } from "react";
+import Button from "./Button";
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -47,7 +48,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={onSubmitHandler}
-      className="flex flex-col bg-neutral-900 p-10 rounded-lg mx-auto w-full lg:w-2/3 xl:w-1/2 gap-5"
+      className="flex flex-col bg-neutral-900 p-10 gap-5"
     >
       <h1 className="text-center text-2xl">Contact Form</h1>
       <div className="flex flex-col">
@@ -89,13 +90,9 @@ const ContactForm = () => {
           required
         />
       </div>
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="border-2 border-red-500 text-red-500 px-10 py-3 rounded-md font-bold mt-5"
-      >
+      <Button type="submit" disabled={isSubmitting} className="mt-5">
         {isSubmitting ? "Sending..." : "Send Message"}
-      </button>
+      </Button>
     </form>
   );
 };

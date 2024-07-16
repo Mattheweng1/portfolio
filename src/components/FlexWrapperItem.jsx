@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 
 const FlexWrapperItem = ({ className, children }) => {
-  const classNameString =
+  className =
     "w-full lg:w-1/2 flex flex-col self-center items-center justify-center " +
     className;
 
-  return <div className={classNameString}>{children}</div>;
+  return <div className={className}>{children}</div>;
 };
 
 FlexWrapperItem.propTypes = {

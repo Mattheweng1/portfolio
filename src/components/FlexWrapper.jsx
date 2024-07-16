@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
 const FlexWrapper = ({ className, children }) => {
-  const classNameString = "flex flex-wrap justify-around my-16 " + className;
+  className = "flex flex-wrap justify-around my-16 " + className;
 
-  return <div className={classNameString}>{children}</div>;
+  return <div className={className}>{children}</div>;
 };
 
 FlexWrapper.propTypes = {

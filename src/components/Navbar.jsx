@@ -5,7 +5,7 @@ import NavIcons from "./NavIcons";
 import SlideIn from "./SlideIn";
 import { AnimatePresence } from "framer-motion";
 import StaggerBox from "./StaggerBox";
-import StaggerItem from "./StaggerItem";
+import MenuLink from "./MenuLink";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,21 +67,15 @@ const Navbar = () => {
               onView
               staggerChildren={0.2}
             >
-              <StaggerItem initialX={100} duration={1} spring>
-                <a href="#about" onClick={toggleMenu}>
-                  About
-                </a>
-              </StaggerItem>
-              <StaggerItem initialX={100} duration={1} spring>
-                <a href="#projects" onClick={toggleMenu}>
-                  Projects
-                </a>
-              </StaggerItem>
-              <StaggerItem initialX={100} duration={1} spring>
-                <a href="#contact" onClick={toggleMenu}>
-                  Contact
-                </a>
-              </StaggerItem>
+              <MenuLink href="#about" onClick={toggleMenu}>
+                About
+              </MenuLink>
+              <MenuLink href="#projects" onClick={toggleMenu}>
+                Projects
+              </MenuLink>
+              <MenuLink href="#contact" onClick={toggleMenu}>
+                Contact
+              </MenuLink>
               <NavIcons />
             </StaggerBox>
           </SlideIn>

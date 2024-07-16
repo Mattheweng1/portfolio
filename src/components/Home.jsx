@@ -4,7 +4,7 @@ import DropIn from "./DropIn";
 import SlideIn from "./SlideIn";
 import Swaying from "./Swaying";
 import StaggerBox from "./StaggerBox";
-import StaggerItem from "./StaggerItem";
+import MenuLink from "./MenuLink";
 
 const Home = () => {
   return (
@@ -61,21 +61,9 @@ const Home = () => {
             onView
             staggerChildren={0.2}
           >
-            <a href="#about">
-              <StaggerItem initialX={100} duration={1} spring>
-                About
-              </StaggerItem>
-            </a>
-            <a href="#projects">
-              <StaggerItem initialX={100} duration={1} spring>
-                Projects
-              </StaggerItem>
-            </a>
-            <a href="#contact">
-              <StaggerItem initialX={100} duration={1} spring>
-                Contact
-              </StaggerItem>
-            </a>
+            <MenuLink href="#about">About</MenuLink>
+            <MenuLink href="#projects">Projects</MenuLink>
+            <MenuLink href="#contact">Contact</MenuLink>
           </StaggerBox>
         </div>
       </div>

@@ -1,8 +1,12 @@
+import battleshipScreenshot from "/home/matthew/repos/portfolio/src/assets/projects/battleship-screenshot.png";
+import weatherAppScreenshot from "/home/matthew/repos/portfolio/src/assets/projects/weather-app-screenshot.png";
+import portfolioScreenshot from "/home/matthew/repos/portfolio/src/assets/projects/portfolio-screenshot.png";
+
 export const PROJECTS = [
   {
     title: "Battleship",
     image: {
-      src: "src/assets/projects/battleship-screenshot.png",
+      src: battleshipScreenshot,
       alt: "Battleship Website",
     },
     description:
@@ -16,7 +20,7 @@ export const PROJECTS = [
   {
     title: "Weather App",
     image: {
-      src: "src/assets/projects/weather-app-screenshot.png",
+      src: weatherAppScreenshot,
       alt: "Weather App Website",
     },
     description:
@@ -30,7 +34,7 @@ export const PROJECTS = [
   {
     title: "Portfolio Website",
     image: {
-      src: "src/assets/projects/portfolio-screenshot.png",
+      src: portfolioScreenshot,
       alt: "Portfolio Website",
     },
     description:

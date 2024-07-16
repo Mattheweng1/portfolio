@@ -6,6 +6,7 @@ import Swaying from "./Swaying";
 import StaggerBox from "./StaggerBox";
 import MenuLink from "./MenuLink";
 import HoverTap from "./HoverTap";
+import profilePhoto from "/home/matthew/repos/portfolio/src/assets/profile-photo-2023.jpeg";
 
 const Home = () => {
   return (
@@ -49,11 +50,7 @@ const Home = () => {
             duration={1}
             spring
           >
-            <img
-              src="src/assets/Profile Photo 2023.JPEG"
-              alt="Profile Photo"
-              className="h-full"
-            />
+            <img src={profilePhoto} alt="Profile Photo" className="h-full" />
           </SlideIn>
         </div>
         <div className="flex-auto m-6 flex justify-end text-5xl font-light lg:h-[35vh] lg:self-center">

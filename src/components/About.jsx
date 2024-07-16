@@ -23,7 +23,7 @@ const About = () => {
                 initialColor="#ef4444"
                 hoveredColor="#b91c1c"
                 tappedColor="#b91c1c"
-                hoveredScale={1.05}
+                hoveredScaleX={1.05}
                 duration={0.1}
               >
                 <a

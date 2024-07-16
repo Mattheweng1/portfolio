@@ -6,6 +6,7 @@ import SlideIn from "./SlideIn";
 import { AnimatePresence } from "framer-motion";
 import StaggerBox from "./StaggerBox";
 import MenuLink from "./MenuLink";
+import HoverTap from "./HoverTap";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,13 +32,15 @@ const Navbar = () => {
       exitY={"-100%"}
       duration={0.5}
     >
-      <a
-        href="#home"
-        className="flex flex-shrink-0 items-end font-bold select-none z-10"
-      >
-        <span className="text-red-500 text-3xl leading-[0.74]">ME</span>
-        <span className="leading-[0.74]">dev</span>
-      </a>
+      <HoverTap hoveredScale={1.1} hoveredColor="#b91c1c" tappedColor="#b91c1c">
+        <a
+          href="#home"
+          className="flex flex-shrink-0 items-end font-bold select-none z-10"
+        >
+          <span className="text-red-500 text-3xl leading-[0.74]">ME</span>
+          <span className="leading-[0.74]">dev</span>
+        </a>
+      </HoverTap>
       <div className="items-center justify-center gap-4 text-xl hidden md:flex">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -51,7 +54,15 @@ const Navbar = () => {
       </div>
       <div className="md:hidden z-10">
         <button onClick={toggleMenu}>
-          {isOpen ? <FaX /> : <FaBarsStaggered />}
+          {isOpen ? (
+            <HoverTap hoveredScale={1.2}>
+              <FaX />
+            </HoverTap>
+          ) : (
+            <HoverTap hoveredScale={1.2}>
+              <FaBarsStaggered />
+            </HoverTap>
+          )}
         </button>
       </div>
       <AnimatePresence>

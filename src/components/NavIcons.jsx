@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { LINKS } from "../constants/constants";
 import SlideInView from "./SlideInView";
+import HoverTap from "./HoverTap";
 
 const NavIcons = ({ className, animateOnce }) => {
   return (
@@ -13,9 +14,11 @@ const NavIcons = ({ className, animateOnce }) => {
         delay={1}
         spring
       >
-        <a href={LINKS.linkedIn} target="_blank" rel="noopener noreferrer">
-          <FaLinkedin />
-        </a>
+        <HoverTap hoveredScale={1.2} spring>
+          <a href={LINKS.linkedIn} target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
+        </HoverTap>
       </SlideInView>
       <SlideInView
         once={animateOnce}
@@ -24,9 +27,11 @@ const NavIcons = ({ className, animateOnce }) => {
         delay={1.3}
         spring
       >
-        <a href={LINKS.gitHub} target="_blank" rel="noopener noreferrer">
-          <FaGithub />
-        </a>
+        <HoverTap hoveredScale={1.2} spring>
+          <a href={LINKS.gitHub} target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+          </a>
+        </HoverTap>
       </SlideInView>
       <SlideInView
         className="h-1 rounded-sm flex-auto bg bg-neutral-300"

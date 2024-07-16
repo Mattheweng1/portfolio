@@ -33,6 +33,7 @@ const Navbar = () => {
       duration={0.5}
     >
       <HoverTap
+        className="z-10"
         hoveredScale={1.1}
         hoveredColor="#b91c1c"
         tappedColor="#b91c1c"
@@ -40,7 +41,7 @@ const Navbar = () => {
       >
         <a
           href="#home"
-          className="flex flex-shrink-0 items-end font-bold select-none z-10"
+          className="flex flex-shrink-0 items-end font-bold select-none"
         >
           <span className="text-red-500 text-3xl leading-[0.74]">ME</span>
           <span className="leading-[0.74]">dev</span>
@@ -83,7 +84,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <SlideIn
-            className="md:hidden fixed top-0 left-0 z-1 h-screen w-full p-10 bg-black"
+            className="md:hidden fixed top-0 left-0 h-screen w-full p-10 bg-black"
             initialY={"-100%"}
             exitY={"-100%"}
             duration={0.5}

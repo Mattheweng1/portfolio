@@ -67,17 +67,17 @@ const Navbar = () => {
               onView
               staggerChildren={0.2}
             >
-              <StaggerItem initialX={100} duration={1}>
+              <StaggerItem initialX={100} duration={1} spring>
                 <a href="#about" onClick={toggleMenu}>
                   About
                 </a>
               </StaggerItem>
-              <StaggerItem initialX={100} duration={1}>
+              <StaggerItem initialX={100} duration={1} spring>
                 <a href="#projects" onClick={toggleMenu}>
                   Projects
                 </a>
               </StaggerItem>
-              <StaggerItem initialX={100} duration={1}>
+              <StaggerItem initialX={100} duration={1} spring>
                 <a href="#contact" onClick={toggleMenu}>
                   Contact
                 </a>

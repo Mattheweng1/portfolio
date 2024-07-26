@@ -1,5 +1,6 @@
 import battleshipScreenshot from "/home/matthew/repos/portfolio/src/assets/projects/battleship-screenshot.png";
 import weatherAppScreenshot from "/home/matthew/repos/portfolio/src/assets/projects/weather-app-screenshot.png";
+import ticTacToeScreenshot from "/home/matthew/repos/portfolio/src/assets/projects/tic-tac-toe-screenshot.png";
 import portfolioScreenshot from "/home/matthew/repos/portfolio/src/assets/projects/portfolio-screenshot.png";
 
 export const PROJECTS = [
@@ -32,6 +33,20 @@ export const PROJECTS = [
     },
   },
   {
+    title: "Tic Tac Toe",
+    image: {
+      src: ticTacToeScreenshot,
+      alt: "Tic Tac Toe Website",
+    },
+    description:
+      "This is a website to play the classic game of tic-tac-toe! Play a friend locally or challenge one of the bots! Unfortunately, one of them is unbeatable. Why not try a game?",
+    technologies: ["HTML", "CSS", "Javascript"],
+    link: {
+      live: "https://mattheweng1.github.io/project-tic-tac-toe/",
+      code: "https://github.com/Mattheweng1/project-tic-tac-toe",
+    },
+  },
+  {
     title: "Portfolio Website",
     image: {
       src: portfolioScreenshot,
@@ -39,7 +54,7 @@ export const PROJECTS = [
     },
     description:
       "A personal portfolio website showcasing projects, skills, and contact information. It's the website you're on right now!",
-    technologies: ["HTML", "React", "Tailwind", "Framer Motion"],
+    technologies: ["React", "Tailwind", "Framer Motion"],
     link: {
       live: "https://mattheweng1.github.io/portfolio/",
       code: "https://github.com/Mattheweng1/portfolio",

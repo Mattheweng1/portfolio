@@ -1,6 +1,6 @@
 import battleshipScreenshot from "/home/matthew/repos/portfolio/src/assets/projects/battleship-screenshot.png";
 import weatherAppScreenshot from "/home/matthew/repos/portfolio/src/assets/projects/weather-app-screenshot.png";
-import ticTacToeScreenshot from "/home/matthew/repos/portfolio/src/assets/projects/tic-tac-toe-screenshot.png";
+/* import ticTacToeScreenshot from "/home/matthew/repos/portfolio/src/assets/projects/tic-tac-toe-screenshot.png"; */
 import portfolioScreenshot from "/home/matthew/repos/portfolio/src/assets/projects/portfolio-screenshot.png";
 
 export const PROJECTS = [
@@ -12,7 +12,7 @@ export const PROJECTS = [
     },
     description:
       "This project is a web-based implementation of the classic Battleship game where you play against an intelligent AI that attacks using probability maps. Care to challenge the computer?",
-    technologies: ["HTML", "CSS", "Javascript"],
+    technologies: ["HTML", "CSS", "Javascript", "Jest"],
     link: {
       live: "https://mattheweng1.github.io/project-battleship/",
       code: "https://github.com/Mattheweng1/project-battleship",
@@ -31,7 +31,7 @@ export const PROJECTS = [
       live: "https://mattheweng1.github.io/project-weather-app/",
       code: "https://github.com/Mattheweng1/project-weather-app",
     },
-  },
+  } /* 
   {
     title: "Tic Tac Toe",
     image: {
@@ -45,7 +45,7 @@ export const PROJECTS = [
       live: "https://mattheweng1.github.io/project-tic-tac-toe/",
       code: "https://github.com/Mattheweng1/project-tic-tac-toe",
     },
-  },
+  }, */,
   {
     title: "Portfolio Website",
     image: {
